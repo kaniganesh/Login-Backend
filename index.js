@@ -13,10 +13,12 @@ app.listen(5000, function () {
 
 // API endpoint
 app.post("/login", function (req, res) {
-    const { username: inputUsername, password: inputPassword } = req.body;
+    const users = [
+        { username: "Kani", password: "123" } // default user
+      ];
 
-    console.log("Username:", inputUsername);
-    console.log("Password:", inputPassword);
+    console.log("Username:", Kani);
+    console.log("Password:", 123);
 
     if (!/^[A-Z]/.test(inputUsername)) {
         res.status(400).send({ success: false, message: "Username must start with a capital letter." });
